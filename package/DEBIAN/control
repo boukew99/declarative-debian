@@ -1,0 +1,9 @@
+Source: boukew99
+Version: 0.1
+License: MIT
+Section: metapackages
+Maintainer: boukew99
+Package: boukew99
+Architecture: all
+Depends: ffmpeg, brotli, code, curl, git, nano, opus-tools, tldr, webp
+Description: meta package for Debian customization.
