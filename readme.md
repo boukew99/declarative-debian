@@ -35,7 +35,7 @@ It is expected that dependencies change. Just edit the `setting.sh` file with th
 The meta-package is tracked by `apt` and thus it is trivial to remove the packages. Use:
 
 ```sh
-sudo apt remove declarative-debian
+sudo apt autoremove declarative-debian
 ```
 
 This uses the package name. All declared packages should now be removed.
