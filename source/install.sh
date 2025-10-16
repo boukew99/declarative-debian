@@ -1,17 +1,15 @@
 
 #!/usr/bin/env bash
 
-source ../setting.sh # holds exported variables
-
 mkdir -p /tmp/declarative-debian
 
 # Templating the control file
-bash control.sh > "/tmp/declarative-debian/declarative-debian" 
+php control.php > "/tmp/declarative-debian/declarative-debian"
 
 (
     # Change working directory for the build process
     cd /tmp/declarative-debian
-	
+
 
     # Building the debian package
     equivs-build declarative-debian

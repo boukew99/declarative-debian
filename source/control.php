@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env php
 
-DEPENDENCIES=${DEPENDENCIES:-""}
-# Using a fixed base and a dynamic timestamp guarantees a higher version number for updates.
+<?php
+
+include '../setting.php';
+$DEPENDENCIES = getenv('DEPENDENCIES') ?: '';
 
 # Based on `equivs-control` output
 # Commented entries have reasonable defaults.
 
-cat << EOF
+?>
 # Source: <source package name; defaults to package name>
 Section: metapackage
 Priority: optional
@@ -17,7 +19,7 @@ Package: declarative-debian
 # Version: <enter version here; defaults to 1.0>
 # Maintainer: Your Name <yourname@example.com>
 # Pre-Depends: <comma-separated list of packages>
-Depends: $DEPENDENCIES
+Depends: <?= $DEPENDENCIES . PHP_EOL ?>
 # Recommends: <comma-separated list of packages>
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
@@ -34,7 +36,6 @@ Depends: $DEPENDENCIES
 Description: Debian declarative package management.
  This is a generated package for user customization.
  Use it to have consisten place where your packages are declared.
-EOF
 
 
 
