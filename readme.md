@@ -21,11 +21,11 @@ To control the packages you want, you need to state the package names by adding 
 
 ## Install Dependencies
 
-Run `./install.sh` to create the meta-package and (re-)install it. You will need to give super user access and confirm the installation.
+Run `source/install.sh` to create the meta-package and (re-)install it. You will need to give super user access and confirm the installation.
 
 ## Updating Dependencies
 
-It is expected that dependencies change. Just edit the `setting.php` file with the new dependencies. Then simply run `./install.sh` again.
+It is expected that dependencies change. Just edit the `setting.php` file with the new dependencies. Then simply run `source/install.sh` again.
 
 ## Removing Dependencies
 
